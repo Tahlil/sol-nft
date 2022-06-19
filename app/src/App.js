@@ -35,6 +35,13 @@ const App = () => {
 			setWalletAddress(response.publicKey.toString());
 		}
 	}
+	const renderNotConnectedContainer = () => ( 
+        <div>
+        <button className='cta-button connect-wallet-button' onClick = { connectWallet } > Connect to Wallet </button>
+     
+     
+        </div>
+        )
 
 	useEffect(() => {
 		const onLoad = async () => {
@@ -43,12 +50,15 @@ const App = () => {
 		window.addEventListener("load", onLoad);
 		return () => window.removeEventListener("load", onLoad);
 	}, []);
+
+
 	return (
 		<div className="App">
 			<div className="container">
 				<div className="header-container">
 					<p className="header">🍭 Candy Drop</p>
 					<p className="sub-text">NFT drop machine with fair mint</p>
+					{renderNotConnectedContainer()}
 				</div>
 				<div className="footer-container">
 					<img
