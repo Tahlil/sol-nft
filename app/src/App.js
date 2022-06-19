@@ -25,7 +25,7 @@ const App = () => {
 		const onLoad = async () => {
 			await checkIfWalletIsConnected();
 		}
-		window.addEventListener("load", onload);
+		window.addEventListener("load", onLoad);
 		return () => window.removeEventListener("load", onLoad);
 	}, []);
 	return (
