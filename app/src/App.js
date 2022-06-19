@@ -18,6 +18,7 @@ const App = () => {
 				onlyIfTrusted: true
 			  });
 			  console.log("Connected with Public Key: ", response.PublicKey.toString());
+			  setWalletAddress(response.PublicKey.toString());
 			}
 			else {
 			  console.log("Solana object not found, Get a Phantomp wallet");
@@ -58,7 +59,7 @@ const App = () => {
 				<div className="header-container">
 					<p className="header">🍭 Candy Drop</p>
 					<p className="sub-text">NFT drop machine with fair mint</p>
-					{renderNotConnectedContainer()}
+					{!walletAddress && renderNotConnectedContainer()}
 				</div>
 				<div className="footer-container">
 					<img
