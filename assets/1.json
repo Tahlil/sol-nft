@@ -1,0 +1,19 @@
+{
+    "name": "NFT1",
+    "symbol": "",
+    "image": "1.png",
+    "properties": {
+        "files": [
+            {
+                "url": "1.png",
+                "type": "image/png"
+            }
+        ],
+        "creators": [
+            {
+                "address": "Wallet_address",
+                "share": 100
+            }
+        ]
+    }
+}
