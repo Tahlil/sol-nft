@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import twitterLogo from "./assets/twitter-logo.svg";
 
@@ -20,6 +20,14 @@ const App = () => {
 			console.error(error);
 		}
 	}
+
+	useEffect(() => {
+		const onLoad = async () => {
+			await checkIfWalletIsConnected();
+		}
+		window.addEventListener("load", onload);
+		return () => window.removeEventListener("load", onLoad);
+	}, []);
 	return (
 		<div className="App">
 			<div className="container">
