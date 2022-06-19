@@ -44,7 +44,7 @@ ts-node ./packages/cli/src/candy-machine-v2-cli.ts --version
 (Assuming you are still in the `js` directory)
 8. Go to the root project directory and run the following commant to uopload NFT
 ```
-ts-node ~/Desktop/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./asset
+ts-node ~/Desktop/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
 ```
 (Assuming the `metaplex` project is cloned on Desktop directory)
 9. Verify upload
